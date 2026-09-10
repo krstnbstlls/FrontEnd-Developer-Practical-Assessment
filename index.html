@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Users By Kristina Bustillos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/users.css" type="text/css"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- navigation -->
+  <header class="navbar" id="navigation">
+      <!-- Left Section: Logo & Brand -->
+      <div class="navbar-left">
+          <div class="brand-icon">
+              <div class="grid-box"></div>
+              <div class="grid-box"></div>
+              <div class="grid-box"></div>
+              <div class="grid-box"></div>
+          </div>
+          <span class="brand-name">Company</span>
+
+          <i id="hamburger" class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Center Section: Navigation Links -->
+      <nav class="navbar-center">
+          <a href="#" class="nav-link active">Home</a>
+          <a href="#" class="nav-link">Leads onDemand</a>
+          <a href="#" class="nav-link">Sales onDemand</a>
+          <a href="#" class="nav-link">Opportunities</a>
+          <a href="#" class="nav-link">Content onDemand</a>
+          <a href="#" class="nav-link">Support onDemand</a>
+          <a href="#" class="nav-link">Reports onDemand</a>
+          <a href="#" class="nav-link">Module 8</a>
+          <a href="#" class="nav-link">Module 9</a>
+      </nav>
+
+      <!-- Right Section: Search, Notifications, Profile -->
+      <div class="navbar-right">
+          <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="notification-container">
+              <i class="fa-solid fa-bell"></i>
+              <span class="notification-badge">1</span>
+          </div>
+          <div class="user-profile">
+              <span class="username">M. Greevos</span>
+              <i class="fa-solid fa-caret-down"></i>
+          </div>
+      </div>
+  </header>
+    <!-- Main App Container Layout -->
+    <div class="app-container d-flex flex-column flex-xl-row min-vh-100">
+        
+        <!-- Left Sidebar Menu -->
+        <aside class="sidebar bg-white border-end py-3 flex-shrink-0">
+            <div class="sidebar-category mb-1">
+                <div class="category-header d-flex align-items-center gap-2 px-3 py-2 fw-bold text-secondary fs-7">
+                    <i class="fa-solid fa-user-gear text-primary"></i>
+                    <span>User management</span>
+                </div>
+                <ul class="submenu list-unstyled ps-3 mb-0">
+                    <li><a href="#" class="sub-item active d-flex align-items-center gap-2 px-3 py-2 rounded-start text-decoration-none"><i class="fa-solid fa-user-pen text-primary"></i> Edit Users</a></li>
+                    <li><a href="#" class="sub-item d-flex align-items-center gap-2 px-3 py-2 rounded-start text-decoration-none"><i class="fa-solid fa-users-gear text-primary"></i> Edit Workgroups</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-category mb-1">
+                <a href="#" class="category-link d-flex align-items-center gap-2 px-3 py-2 text-decoration-none">
+                    <i class="fa-solid fa-file-lines text-primary"></i>
+                    <span>File management</span>
+                </a>
+            </div>
+
+            <div class="sidebar-category mb-1">
+                <a href="#" class="category-link d-flex align-items-center gap-2 px-3 py-2 text-decoration-none">
+                    <i class="fa-solid fa-network-wired text-primary"></i>
+                    <span>Site management</span>
+                </a>
+            </div>
+
+            <div class="sidebar-category mb-1">
+                <a href="#" class="category-link d-flex align-items-center gap-2 px-3 py-2 text-decoration-none">
+                    <i class="fa-solid fa-bullhorn text-primary"></i>
+                    <span>Marketing management</span>
+                </a>
+            </div>
+
+            <div class="sidebar-category mb-1">
+                <a href="#" class="category-link d-flex align-items-center gap-2 px-3 py-2 text-decoration-none">
+                    <i class="fa-solid fa-address-book text-primary"></i>
+                    <span>CRM management</span>
+                </a>
+            </div>
+
+            <div class="sidebar-category mb-1">
+                <a href="#" class="category-link d-flex align-items-center gap-2 px-3 py-2 text-decoration-none">
+                    <i class="fa-solid fa-chart-column text-primary"></i>
+                    <span>Critical Metrics</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content flex-grow-1 p-3 p-md-4 overflow-x-auto">
+            
+            <!-- Content Header Bar -->
+            <div class="content-top-bar d-flex justify-content-between align-items-center mb-4">
+                <h1 class="page-title fs-5 fw-bold text-dark mb-0">User Management - Edit Users</h1>
+                <button class="btn btn-success btn-sm d-flex align-items-center gap-2 px-3 py-2 fw-semibold shadow-sm">
+                    <i class="fa-solid fa-circle-plus"></i> Add User
+                </button>
+            </div>
+
+            <!-- Filters & Search Toolbar Card -->
+            <div class="filter-card bg-white rounded-3 p-3 border mb-4 shadow-xs">
+                <div class="row g-3 mb-3">
+                    <div class="col-md-8 position-relative">
+                        <div class="search-input-wrapper position-relative">
+                            <input type="text" placeholder="Search" class="form-control form-control-sm ps-5 text-secondary">
+                            <i class="fa-solid fa-magnifying-glass position-absolute top-50 translate-middle-y text-muted ms-3"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-select form-select-sm text-secondary">
+                            <option selected>Search by field...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <button id="filterToggleBtn" class="btn btn-teal text-white btn-sm d-flex align-items-center gap-1 px-3 fw-semibold" style="background-color: #2dd4bf;">
+                      <i class="fa-solid fa-filter"></i> Filters
+                  </button>
+                  <a href="#" class="clear-filters text-info small text-decoration-none">Clear Filters</a>
+              </div>
+
+                <!-- Dropdown Filters Grid -->
+                <div id="filterSelects" class="row g-3 pt-3 d-none">
+                    <div class="col-12 col-md-4">
+                        <label class="form-label small fw-bold text-secondary mb-1">Status</label>
+                        <select class="form-select form-select-sm text-secondary filter-dropdown">
+                            <option value="all">All</option>
+                            <option value="active">Active</option>
+                            <option value="not-active">Not-Active</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <label class="form-label small fw-bold text-secondary mb-1">Region</label>
+                        <select class="form-select form-select-sm text-secondary filter-dropdown">
+                            <option value="all">All</option>
+                            <option value="corporate">Corporate</option>
+                            <option value="west">West</option>
+                            <option value="south">South</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <label class="form-label small fw-bold text-secondary mb-1">Division</label>
+                        <select class="form-select form-select-sm text-secondary filter-dropdown">
+                            <option value="all">All</option>
+                            <option value="ny">NY</option>
+                            <option value="ca">CA</option>
+                            <option value="tx">TX</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Table Card -->
+            <div class="table-card bg-white rounded-3 border shadow-xs overflow-hidden">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0 text-nowrap" style="font-size: 13px;">
+                        <thead class="table-light text-secondary">
+                            <tr>
+                                <th class="py-3 px-3">ID</th>
+                                <th class="py-3 px-3">First Name</th>
+                                <th class="py-3 px-3">Last Name</th>
+                                <th class="py-3 px-3">Username/Email</th>
+                                <th class="py-3 px-3">Group</th>
+                                <th class="py-3 px-3">Division</th>
+                                <th class="py-3 px-3">Region</th>
+                                <th class="py-3 px-3">User Type</th>
+                                <th class="py-3 px-3">Submitted Date</th>
+                                <th class="py-3 px-3">Enabled Date</th>
+                                <th class="py-3 px-3">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-3">0513</td>
+                                <td class="px-3">John</td>
+                                <td class="px-3">Doe</td>
+                                <td class="px-3">JohnDoe@Email.com</td>
+                                <td class="px-3">Admin</td>
+                                <td class="px-3">NY</td>
+                                <td class="px-3">Corporate</td>
+                                <td class="px-3">05/01/2025</td>
+                                <td class="px-3">05/01/2025</td>
+                                <td class="px-3">05/01/2025</td>
+                                <td class="px-3 action-icons">
+                                    <i class="fa-regular fa-pen-to-square text-primary cursor-pointer"></i>
+                                    <i class="fa-solid fa-ban text-danger cursor-pointer ms-2"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-3">1681</td>
+                                <td class="px-3">Mike</td>
+                                <td class="px-3">Harry</td>
+                                <td class="px-3">Mikeharry@Email.com</td>
+                                <td class="px-3">Admin</td>
+                                <td class="px-3">NY</td>
+                                <td class="px-3">Corporate</td>
+                                <td class="px-3">05/02/2025</td>
+                                <td class="px-3">05/05/2025</td>
+                                <td class="px-3">05/05/2025</td>
+                                <td class="px-3 action-icons">
+                                    <i class="fa-regular fa-pen-to-square text-primary cursor-pointer"></i>
+                                    <i class="fa-solid fa-ban text-danger cursor-pointer ms-2"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-3">0123</td>
+                                <td class="px-3">Jess</td>
+                                <td class="px-3">Lambert</td>
+                                <td class="px-3">JLambert91@Email.com</td>
+                                <td class="px-3">Licensed</td>
+                                <td class="px-3">NY</td>
+                                <td class="px-3">Corporate</td>
+                                <td class="px-3">05/01/2025</td>
+                                <td class="px-3">05/01/2025</td>
+                                <td class="px-3">05/01/2025</td>
+                                <td class="px-3 action-icons">
+                                    <i class="fa-regular fa-pen-to-square text-primary cursor-pointer"></i>
+                                    <i class="fa-solid fa-ban text-danger cursor-pointer ms-2"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-3">8415</td>
+                                <td class="px-3">Yor</td>
+                                <td class="px-3">Plan</td>
+                                <td class="px-3">YorP@Email.com</td>
+                                <td class="px-3">Forward</td>
+                                <td class="px-3">NY</td>
+                                <td class="px-3">Corporate</td>
+                                <td class="px-3">05/15/2025</td>
+                                <td class="px-3">05/15/2025</td>
+                                <td class="px-3">05/15/2025</td>
+                                <td class="px-3 action-icons">
+                                    <i class="fa-regular fa-pen-to-square text-primary cursor-pointer"></i>
+                                    <i class="fa-solid fa-ban text-danger cursor-pointer ms-2"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-3">6512</td>
+                                <td class="px-3">Kim</td>
+                                <td class="px-3">Jeun</td>
+                                <td class="px-3">KimJ99@Email.com</td>
+                                <td class="px-3">Recruiter</td>
+                                <td class="px-3">NY</td>
+                                <td class="px-3">Corporate</td>
+                                <td class="px-3">05/15/2025</td>
+                                <td class="px-3">05/16/2025</td>
+                                <td class="px-3">05/16/2025</td>
+                                <td class="px-3 action-icons">
+                                    <i class="fa-regular fa-pen-to-square text-primary cursor-pointer"></i>
+                                    <i class="fa-solid fa-ban text-danger cursor-pointer ms-2"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-3">1874</td>
+                                <td class="px-3">Harry</td>
+                                <td class="px-3">Styles</td>
+                                <td class="px-3">HarrySS@Email.com</td>
+                                <td class="px-3">Forward</td>
+                                <td class="px-3">NY</td>
+                                <td class="px-3">Corporate</td>
+                                <td class="px-3">06/01/2025</td>
+                                <td class="px-3">06/01/2025</td>
+                                <td class="px-3">06/01/2025</td>
+                                <td class="px-3 action-icons">
+                                    <i class="fa-regular fa-pen-to-square text-primary cursor-pointer"></i>
+                                    <i class="fa-solid fa-ban text-danger cursor-pointer ms-2"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-3">6301</td>
+                                <td class="px-3">Fulgur</td>
+                                <td class="px-3">Metane</td>
+                                <td class="px-3">FulgurMet@Email.com</td>
+                                <td class="px-3">Forward</td>
+                                <td class="px-3">NY</td>
+                                <td class="px-3">Corporate</td>
+                                <td class="px-3">06/02/2025</td>
+                                <td class="px-3">06/02/2025</td>
+                                <td class="px-3">06/02/2025</td>
+                                <td class="px-3 action-icons">
+                                    <i class="fa-regular fa-pen-to-square text-primary cursor-pointer"></i>
+                                    <i class="fa-solid fa-ban text-danger cursor-pointer ms-2"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-3">4328</td>
+                                <td class="px-3">Sarah</td>
+                                <td class="px-3">Chen</td>
+                                <td class="px-3">SarahC@Email.com</td>
+                                <td class="px-3">Admin</td>
+                                <td class="px-3">CA</td>
+                                <td class="px-3">West</td>
+                                <td class="px-3">06/10/2025</td>
+                                <td class="px-3">06/10/2025</td>
+                                <td class="px-3">06/10/2025</td>
+                                <td class="px-3 action-icons">
+                                    <i class="fa-regular fa-pen-to-square text-primary cursor-pointer"></i>
+                                    <i class="fa-solid fa-ban text-danger cursor-pointer ms-2"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-3">9987</td>
+                                <td class="px-3">David</td>
+                                <td class="px-3">Park</td>
+                                <td class="px-3">DavidP@Email.com</td>
+                                <td class="px-3">Licensed</td>
+                                <td class="px-3">CA</td>
+                                <td class="px-3">West</td>
+                                <td class="px-3">06/12/2025</td>
+                                <td class="px-3">06/12/2025</td>
+                                <td class="px-3">06/12/2025</td>
+                                <td class="px-3 action-icons">
+                                    <i class="fa-regular fa-pen-to-square text-primary cursor-pointer"></i>
+                                    <i class="fa-solid fa-ban text-danger cursor-pointer ms-2"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-3">7764</td>
+                                <td class="px-3">Maria</td>
+                                <td class="px-3">Santos</td>
+                                <td class="px-3">MariaS@Email.com</td>
+                                <td class="px-3">Recruiter</td>
+                                <td class="px-3">TX</td>
+                                <td class="px-3">South</td>
+                                <td class="px-3">06/15/2025</td>
+                                <td class="px-3">06/15/2025</td>
+                                <td class="px-3">06/15/2025</td>
+                                <td class="px-3 action-icons">
+                                    <i class="fa-regular fa-pen-to-square text-primary cursor-pointer"></i>
+                                    <i class="fa-solid fa-ban text-danger cursor-pointer ms-2"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Table Footer / Pagination -->
+                <div class="table-footer d-flex flex-column flex-md-row justify-content-between align-items-center p-3 bg-white border-top gap-2">
+                    <span class="pagination-info small text-muted">Showing 1 to 10 of 10 entries</span>
+                    <div class="pagination-controls btn-group btn-group-sm" role="group">
+                        <button type="button" class="btn btn-outline-secondary disabled">Previous</button>
+                        <button type="button" class="btn btn-primary active">1</button>
+                        <button type="button" class="btn btn-outline-secondary disabled">Next</button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/users.js"></script>
+</html>
